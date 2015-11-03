@@ -1,0 +1,63 @@
+# Basic invoice information
+invoice:
+  number: 42
+  template: "default"
+  # Date is coded here, so you can rerender the invoice 
+  # at a later point in time
+  date: 2014-07-06
+  location: Pearadise
+  # We use moment.js and numeral.js for localisation
+  language: en
+  currency: €
+
+# Your details
+sender:
+  name_short: Fresh Company
+  name: Fresh Company ltd.
+  street: Veggieroad 32
+  zip: 98765
+  town: Pearadise
+  contact:
+    name: Bob Orange
+    email: bob@example.org
+    phone: +49 123 4567 890
+
+
+# The other guy's details
+receiver:
+  company: Awesome Client
+  title: Fruit Dept
+  name: Mrs. Katy Banana
+  street: Fruitlane 12
+  zip: 12345
+  town: Strawberry Fields
+  country: The Berrylands
+
+# Anything nice above the items table
+intro_text: |
+  Hi guys,
+  we hope you enjoyed your fruit salad.
+
+# Some text below the table
+outro_text: |
+  Please pay during the next 14 days.
+
+
+items:
+  -
+    # Supports calulations (and comments)
+    quantity: |
+      30 + # Small
+      28 + # Medium
+      1 # Mega-large
+    # Supports multiline titles
+    title: |
+      Bananas
+      (EU-conform)
+    tax_rate: 19
+    price: 0.6
+
+  -
+    title: Watermelon
+    tax_rate: 7
+    price: 4
